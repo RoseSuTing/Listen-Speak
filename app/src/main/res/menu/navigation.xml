@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/listen"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/listen"
+        />
+
+    <item
+        android:id="@+id/asking"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/asking" />
+
+    <item
+        android:id="@+id/world"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/world" />
+    <item
+        android:id="@+id/my"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/my" />
+
+</menu>
