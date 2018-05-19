@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="provarry">
+        <item>情感</item>
+        <item>故事</item>
+        <item>吐槽</item>
+        <item>趣事</item>
+        <item>读书</item>
+    </string-array>
+</resources>

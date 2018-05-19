@@ -21,8 +21,6 @@ class ListenAdapter extends ArrayAdapter<User> {
     public void setDefSelect(int position) {
         this.defItem = position;
         notifyDataSetChanged();
-
-
     }
 
     @Override
@@ -41,13 +39,10 @@ class ListenAdapter extends ArrayAdapter<User> {
         } else {
             view = convertView;
             viewHolder = (ViewHolder) view.getTag();
-
         }
 
         viewHolder.Username.setText(user.getUsername());
-        Log.d(getContext().getPackageName().toString(), user.getUsername());
         viewHolder.Title.setText(String.valueOf(user.getTitle()));
-        Log.d(getContext().getPackageName().toString(), String.valueOf(user.getTitle()));
         viewHolder.UserImg.setImageResource(user.getUserImg());
         viewHolder.TitleImg.setImageResource(user.getTitleImg());
         return view;

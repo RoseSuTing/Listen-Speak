@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#b2dfee"/>
+    tools:context=".LoginActivity"
+    android:background="@drawable/register">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,10 +17,10 @@
 
         <android.support.v4.view.ViewPager
             android:id="@+id/vp"
-            android:layout_width="100dp"
+            android:layout_width="106dp"
             android:layout_height="100dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="130dp"/>
+            android:layout_marginTop="145dp"
+            android:layout_marginLeft="135dp"/>
         <TextView
             android:id="@+id/display"
             android:layout_width="match_parent"
@@ -32,15 +29,17 @@
             android:textSize="18sp"
             android:visibility="gone"
             android:textStyle="bold"
-            android:layout_margin="8dp"/>
+            android:layout_margin="8dp" />
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="212dp"
+            android:layout_width="116dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="30dp"
+            android:hint="eamil"
             android:singleLine="true"
+            android:textColorHint="@color/gray"
             tools:layout_editor_absoluteX="75dp"
             tools:layout_editor_absoluteY="201dp" />
 
@@ -48,21 +47,23 @@
             android:id="@+id/password"
             android:layout_width="212dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="18dp"
             android:inputType="textPassword"
             android:singleLine="true"
+            android:hint="password"
+            android:textColorHint="@color/gray"
+            android:layout_marginLeft="130dp"
             tools:layout_editor_absoluteX="75dp"
             tools:layout_editor_absoluteY="73dp" />
 
         <Button
             android:id="@+id/login"
-            android:layout_width="209dp"
+            android:layout_width="118dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="80dp"
+            android:layout_marginLeft="126dp"
+            android:layout_marginTop="25dp"
             android:onClick="btnLogin"
-            android:text="@string/login"
+            android:text="login"
             android:background="@android:color/white"
             android:textColor="@android:color/black"/>
         <Button

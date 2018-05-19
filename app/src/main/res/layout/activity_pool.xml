@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PoolActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/boder">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="写私信"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/boder"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   您好："
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="写点什么吧"
+            android:textColorHint="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="230dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/login_word"
+                android:scaleType="fitXY"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/world_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="username"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:id="@+id/world_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击相应的位置输入内容，本私信是随机发送的"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="70dp"/>
+
+</LinearLayout>

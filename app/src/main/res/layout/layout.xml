@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="360dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingRight="10dp"
     android:orientation="vertical"
-    android:layout_marginLeft="10dp"
+    android:background="@color/white"
+    android:layout_marginTop="20dp"
    >
 <LinearLayout
     android:layout_width="match_parent"
@@ -19,19 +20,21 @@
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#fff"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp" />
 </LinearLayout>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_width="320dp"
+        android:layout_height="150dp"
+        android:background="@drawable/boder"
+        android:layout_marginLeft="25dp">
 
         <ImageView
             android:id="@+id/Title_img"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="match_parent" />
 
 <LinearLayout
@@ -54,5 +57,29 @@
 </LinearLayout>
 
     </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/blueprimary">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/zan"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/fenxiang"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/pinglun"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shoucang"/>
+    </LinearLayout>
 
 </LinearLayout>

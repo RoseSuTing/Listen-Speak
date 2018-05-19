@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Environment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -26,16 +27,23 @@ import android.widget.ImageView;
 import android.widget.ViewSwitcher;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+
+import static android.graphics.ImageFormat.JPEG;
 
 public class SaveActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener,
         ViewSwitcher.ViewFactory {
 // 声明ImageSwitcher
      private android.widget.ImageSwitcher mSwitcher;
      private EditText title;
-    private boolean sdcardExit;
-    private File myPicDir;
     private Button bt_ok;
     private ViewPager vp;
+    int position_i;
     // 图片数组ID
      private Integer[] mThumbIds  = { R.drawable.image1, R.drawable.image2,
             R.drawable.image3, R.drawable.image4, R.drawable.image5,
@@ -53,18 +61,6 @@ public class SaveActivity extends AppCompatActivity implements AdapterView.OnIte
          mSwitcher =  findViewById(R.id.switcher);
          bt_ok=findViewById(R.id.ok);
 
-        sdcardExit = Environment.getExternalStorageState().equals(
-                android.os.Environment.MEDIA_MOUNTED);
-        // 取得sd card路径作为录音文件的位置
-        if (sdcardExit) {
-            String pathStr = Environment.getExternalStorageDirectory().getPath() + "/Picture";
-            myPicDir = new File(pathStr);
-        }
-        if (!myPicDir.exists()) {
-            myPicDir.mkdirs();
-            Log.v("录音", "创建录音文件！" + myPicDir.exists());
-        }
-
 
         //注意在使用一个ImageSwitcher之前，
         //一定要调用setFactory方法，要不setImageResource这个方法会报空指针异常。
@@ -76,12 +72,6 @@ public class SaveActivity extends AppCompatActivity implements AdapterView.OnIte
                 android.R.anim.slide_out_right));
 
         android.widget.Gallery g =  findViewById(R.id.gallery);
-        title = findViewById(R.id.title);
-        String Edittitle = title.getText().toString();
-
-        SharedPreferences.Editor mySharedPreferences = getSharedPreferences("Title", MODE_PRIVATE).edit();
-        mySharedPreferences.putString("title",Edittitle);
-        mySharedPreferences.commit();
 
         //添加OnItemSelectedListener监听器
         g.setAdapter(new ImageAdapter(this));
@@ -94,6 +84,11 @@ public class SaveActivity extends AppCompatActivity implements AdapterView.OnIte
                 //一定要指定是第几个pager，因为要跳到ThreeFragment，这里填写2
                 i.putExtra("id",2);
                 startActivity(i);
+                Calendar now = new GregorianCalendar();
+                SimpleDateFormat simpleDate = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
+                String fileName = simpleDate.format(now.getTime());
+
+              //  saveBitmapToLocal(fileName,mThumbIds[position_i]);
             }
         });
        }
@@ -135,6 +130,7 @@ public class SaveActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> adapter, View v, int position, long id) {
         //设置图片资源
         mSwitcher.setImageResource(mImageIds[position]);
+        position_i= position;
     }
 
     @Override
@@ -169,5 +165,24 @@ public class SaveActivity extends AppCompatActivity implements AdapterView.OnIte
             i.putExtra("id",2);
         }
         super.onResume();
+    }
+
+    public static void saveBitmapToLocal(String fileName, Bitmap bitmap) throws FileNotFoundException {
+        try {
+            String pathStr = Environment.getExternalStorageDirectory().getPath() + "/Picture";
+            File file = new File(pathStr,fileName);
+            File FileParent = file.getParentFile();
+            if(!FileParent.exists())
+            {
+                FileParent.mkdirs();
+            }
+            bitmap.compress(Bitmap.CompressFormat.JPEG,100,new FileOutputStream(file));
+
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+
+        }
+
     }
 }

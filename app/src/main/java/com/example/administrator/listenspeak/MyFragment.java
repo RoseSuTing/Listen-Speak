@@ -19,9 +19,8 @@ public class MyFragment extends android.app.Fragment{
     // TODO: Rename and change types of parameters
     public String mParam1;
     public String mParam2;
-
-
     private OnFragmentInteractionListener mListener;
+
 
     public MyFragment() {
         // Required empty public constructor
@@ -60,11 +59,52 @@ public class MyFragment extends android.app.Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         // final User user ;
-        ImageView backpack = getActivity().findViewById(R.id.img_backpack);
-        backpack.setOnClickListener(new View.OnClickListener() {
+        ImageView setting = getActivity().findViewById(R.id.my_setting);
+        ImageView care = getActivity().findViewById(R.id.img_care);
+        ImageView share = getActivity().findViewById(R.id.img_share);
+        ImageView collection = getActivity().findViewById(R.id.img_collection);
+        ImageView history = getActivity().findViewById(R.id.img_history);
+        ImageView diary = getActivity().findViewById(R.id.img_riji);
+
+        setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),BackpackActivity.class);
+                startActivity(intent);
+            }
+        });
+        care.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),LikeActivity.class);
+                startActivity(intent);
+            }
+        });
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),ShareActivity.class);
+                startActivity(intent);
+            }
+        });
+        collection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),CollectionActivity.class);
+                startActivity(intent);
+            }
+        });
+        diary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),DiaryActivity.class);
+                startActivity(intent);
+            }
+        });
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),HistoryActivity.class);
                 startActivity(intent);
             }
         });

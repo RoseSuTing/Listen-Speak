@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/care_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/care_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消关注"
+        android:layout_marginLeft="137dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="@color/blueprimary">
+
+</LinearLayout>
+</LinearLayout>

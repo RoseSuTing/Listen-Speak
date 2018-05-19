@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KindActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:background="@drawable/kind1"
+        android:layout_marginLeft="50dp"/>
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:background="@drawable/kind2"
+        android:layout_marginLeft="190dp"/>
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:background="@drawable/kind3"
+        android:layout_marginLeft="80dp"/>
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:background="@drawable/kind5"
+        android:layout_marginLeft="230dp"/>
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:background="@drawable/kind4"
+        android:layout_marginLeft="30dp"/>
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:background="@drawable/kind6"
+        android:layout_marginLeft="140dp"/>
+    <Button
+        android:id="@+id/sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boder"
+        android:text="确定"
+        android:layout_marginLeft="150dp"
+        android:textColor="@color/black"/>
+
+
+
+</LinearLayout>

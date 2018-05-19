@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="280dp"
+            android:layout_height="2dip"
+            android:background="#FF909090"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="280dp"
+            android:layout_height="2dip"
+            android:background="#FF909090"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="70dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boder"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="80dp"
+            android:layout_height="2dip"
+            android:background="#FF909090"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+</LinearLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="输入标题"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="25dp"/>
+    <View
+        android:layout_width="250dp"
+        android:layout_height="2dip"
+        android:background="#FF909090"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="60dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="输入内容"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="@drawable/boder">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="写点什么吧"
+            android:textColorHint="@color/black"
+            android:layout_margin="20dp"/>
+    </LinearLayout>
+
+</LinearLayout>

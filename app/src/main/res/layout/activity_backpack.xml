@@ -1,14 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BackpackActivity">
-<Button
+    tools:context=".BackpackActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/image4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号绑定"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+ <ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+   android:background="@drawable/image4"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="180dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号切换"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+           android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="180dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改密码"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="180dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推送设置"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="180dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="倾听偏好设置"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+           android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="130dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐私设置"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="180dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="特色功能"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="180dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用说明"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+           android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="180dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新版介绍"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="180dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/boder"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户反馈"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/image4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="180dp"/>
+
+    </LinearLayout>
+
+ <Button
     android:id="@+id/login_out"
-    android:layout_width="wrap_content"
+    android:layout_width="100dp"
     android:layout_height="wrap_content"
+    android:background="@color/white"
+     android:text="退出登陆"
+     android:textColor="@color/black"
+     android:layout_marginTop="30dp"
+     android:layout_marginLeft="140dp"
     />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

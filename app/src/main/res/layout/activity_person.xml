@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="110dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/micro"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="huabjnxaubcjcb"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="170dp"
+                android:background="@drawable/zan"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/fenxiang"/>
+            <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+                android:background="@drawable/pinglun"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shoucang"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   215获赞  24粉丝  3 关注   "
+                android:layout_marginTop="40dp"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text=" + "
+                android:textSize="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/boder"
+                android:textColor="@color/black"
+                android:listSelector="@drawable/but_selector"
+                />
+
+        </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user"
+        android:textSize="20dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/blue">
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="        TA的发布"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_recyclerview_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerVertical="true"
+        android:scrollbars="none"
+        ></android.support.v7.widget.RecyclerView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="        猜你喜欢"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>

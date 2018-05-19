@@ -25,4 +25,6 @@
     <string name="history">history</string>
     <string name="setting">setting</string>
     <string name="collection">collection</string>
+    <string name="month">month</string>
+    <string name="year">year</string>
 </resources>

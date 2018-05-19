@@ -24,7 +24,20 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".BackpackActivity" />
-        <activity android:name=".SaveActivity"></activity>
+        <activity android:name=".SaveActivity" />
+        <activity android:name=".PersonActivity" />
+        <activity android:name=".TopicActivity" />
+        <activity android:name=".ShareActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".CollectionActivity" />
+        <activity android:name=".DiaryActivity" />
+        <activity android:name=".RecordActivity" />
+        <activity android:name=".WriteActivity" />
+        <activity android:name=".CareActivity" />
+        <activity android:name=".PoolActivity" />
+        <activity android:name=".LikeActivity" />
+        <activity android:name=".SloginActivity" />
+        <activity android:name=".KindActivity"></activity>
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -36,15 +37,12 @@ public class ListenFragment extends  android.app.Fragment {
     private String mParam1;
     private String mParam2;
     private OnFragmentInteractionListener mListener;
-
-    private ListenAdapter listenAdapter;
     public ArrayList<User> UserList = new ArrayList<User>();
     private ListView listview;
     private ImageView play;
     private boolean sigle = false;
     private boolean sdcardExit;
-    private File myRecAudioDir;
-    private File myPlayFile;
+
     private ViewPager vp;
     public ListenFragment() {
         // Required empty public constructor
@@ -80,119 +78,45 @@ public class ListenFragment extends  android.app.Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        listview=getActivity().findViewById(R.id.listview);
+        listview = getActivity().findViewById(R.id.listview);
         play = getActivity().findViewById(R.id.play);
+        ImageView img_like = getActivity().findViewById(R.id.like);
 
-        // 判断sd Card是否插入
-        sdcardExit = Environment.getExternalStorageState().equals(
-                android.os.Environment.MEDIA_MOUNTED);
-        // 取得sd card路径作为录音文件的位置
-        if (sdcardExit) {
-            String pathStr = Environment.getExternalStorageDirectory().getPath() + "/Listen";
-            myRecAudioDir = new File(pathStr);
-            Log.d("TAG", pathStr);
-        }
+        img_like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),LikeActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ListenAdapter listenAdapter =
                 new ListenAdapter(
                         getActivity(), // Current context
                         R.layout.layout, // the layout for each item in the list
                         UserList); // the arrayList to feed the arrayAdapter
-
-        myPlayFile=null;
-        getRecordFiles();
+        String[] email = new String[]{"1457969720@qq.com", "122435436@163.com", "1634235346@qq.com", "14324678@qq.com", "32432546@qq.com", "325436567@qq.com", "326576578@qq.com"};
+        String[] title = new String[]{"bdidbn", "wfqgrgq", "reger", "wtwt", "werewt", "rwewetrw", "wetwq"};
+        final int[] img = new int[]{R.drawable.user1, R.drawable.user2,  R.drawable.user3,  R.drawable.user4,  R.drawable.user5,R.drawable.image6,R.id.img_said};
+        Integer[] mThumbIds  = { R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5, R.drawable.image6, R.drawable.image7 };
+        for (int i = 0; i < email.length; i++) {
+            UserList.add(new User(email[i], title[i], img[i], mThumbIds[i]));
+        }
         listview.setAdapter(listenAdapter);
 
-        /*// 播放
-        play.setOnClickListener(new ImageButton.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sigle = true;
-                // TODO Auto-generated method stub
-                if (myPlayFile != null && myPlayFile.exists()) {
-                    // 打开播放程序
-                    openFile(myPlayFile);
-                } else {
-                    Toast.makeText(getActivity(), "你选的是一个空文件", Toast.LENGTH_LONG).show();
-                    Log.d("没有选择文件","没有选择文件");
-                }
-            }
-        });*/
+
+        //启用监听器
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> arg, View arg1,
-                                    int arg2, long arg3) {
-                // TODO Auto-generated method stub
-                // 当有单点击文件名时将删除按钮及播放按钮Enable
-                play.setEnabled(true);
-                //delete.setEnabled(true);
-                myPlayFile = new File(myRecAudioDir.getAbsolutePath() + File.separator + ((TextView) arg1).getText().toString());
-                DecimalFormat df = new DecimalFormat("#.000");
-
-                //myTextView.setText("你选的是" + ((TextView) arg1).getText().toString());
-                Toast.makeText(getActivity(),"你选的是" + (((TextView) arg1).getText()), Toast.LENGTH_LONG).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+              Intent intent = new Intent(getActivity(),PersonActivity.class);
+              startActivity(intent);
             }
-
         });
-    }
 
-    private void openFile(File f) {
-        Intent intent = new Intent();
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setAction(android.content.Intent.ACTION_VIEW);
-        String type = getMIMEType(f);
-        intent.setDataAndType(Uri.fromFile(f), type);
-        startActivity(intent);
-    }
-
-    private String getMIMEType(File f) {
-        String end = f.getName().substring(f.getName().lastIndexOf(".") + 1,
-                f.getName().length()).toLowerCase();
-        String type = "";
-        if (end.equals("mp3") || end.equals("aac") || end.equals("amr")
-                || end.equals("mpeg") || end.equals("mp4")) {
-            type = "audio";
-        } else if (end.equals("jpg") || end.equals("gif") || end.equals("png")
-                || end.equals("jpeg")) {
-            type = "image";
-        } else {
-            type = "*";
-        }
-        type += "/";
-        return type;
-    }
-
-    //获取文件
-    private void getRecordFiles() {
-        // TODO Auto-generated method stub
-        SharedPreferences sharedPreferences1= getActivity().getSharedPreferences("text", Context.MODE_PRIVATE);
-        String email = sharedPreferences1.getString("email", "");
-        SharedPreferences sharedPreferences2= getActivity().getSharedPreferences("Title", Context.MODE_PRIVATE);
-        String title = sharedPreferences2.getString("title", "");
-        SharedPreferences sharedPreferences= getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
-        int log = sharedPreferences.getInt("log",Context.MODE_PRIVATE);
-        SharedPreferences sharedPreferences3= getActivity().getSharedPreferences("ID", Context.MODE_PRIVATE);
-        int id = sharedPreferences3.getInt("id",Context.MODE_PRIVATE);
-        final int[] img = new int[]{R.drawable.user1, R.drawable.user2,  R.drawable.user3,  R.drawable.user4,  R.drawable.user5};
-        Integer[] mThumbIds  = { R.drawable.image1, R.drawable.image2,
-                R.drawable.image3, R.drawable.image4, R.drawable.image5,
-                R.drawable.image6, R.drawable.image7 };
-        if (sdcardExit) {
-            File files[] = myRecAudioDir.listFiles();
-            if (files != null) {
-                for (int i = 0; i < files.length; i++) {
-                    if (files[i].getName().indexOf(".") >= 0) { // 只取.amr 文件
-                        String fileS = files[i].getName().substring(
-                                files[i].getName().indexOf("."));
-                        if (fileS.toLowerCase().equals(".mp3")
-                                || fileS.toLowerCase().equals(".amr")
-                                || fileS.toLowerCase().equals(".mp4"))
-                            UserList.add(new User(email,files[i].getName(),img[log],mThumbIds[id]));
-                    }
-                }
-            }
-        }
 
     }
+
 
 
     // TODO: Rename method, update argument and hook method into UI event

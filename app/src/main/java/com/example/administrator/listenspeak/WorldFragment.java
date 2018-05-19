@@ -1,12 +1,22 @@
 package com.example.administrator.listenspeak;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -28,6 +38,11 @@ public class WorldFragment extends  android.app.Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private RecyclerView mRecyclerView;
+    private GalleryAdapter mAdapter;
+    private List<Integer> mDatas;
+
 
     public WorldFragment() {
         // Required empty public constructor
@@ -67,6 +82,20 @@ public class WorldFragment extends  android.app.Fragment {
         return inflater.inflate(R.layout.fragment_world, container, false);
     }
 
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        initDatas();
+        //得到控件
+        mRecyclerView = getActivity().findViewById(R.id.id_recyclerview);
+        //设置布局管理器
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        //设置适配器
+        mAdapter = new GalleryAdapter(getActivity(), mDatas);
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
@@ -104,5 +133,77 @@ public class WorldFragment extends  android.app.Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+
+    private void initDatas()
+    {
+        mDatas = new ArrayList<>(Arrays.asList(R.drawable.pool1, R.drawable.pool2, R.drawable.pool3, R.drawable.pool4,
+                R.drawable.pool5, R.drawable.pool6, R.drawable.pool7, R.drawable.pool8));
+    }
+
+    public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHolder>
+    {
+        private LayoutInflater mInflater;
+        private List<Integer> mDatas;
+
+        public GalleryAdapter(Context context, List<Integer> datats)
+        {
+            mInflater = LayoutInflater.from(context);
+            mDatas = datats;
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder
+        {
+            public ViewHolder(View arg0)
+            {
+                super(arg0);
+            }
+
+            ImageView mImg;
+            TextView mTxt;
+        }
+
+        @Override
+        public int getItemCount()
+        {
+            return mDatas.size();
+        }
+
+        /**
+         * 创建ViewHolder
+         */
+        @NonNull
+        @Override
+        public ViewHolder onCreateViewHolder( ViewGroup viewGroup, int i)
+        {
+            View view = mInflater.inflate(R.layout.layout3,
+                    viewGroup, false);
+            ViewHolder viewHolder = new ViewHolder(view);
+
+            viewHolder.mImg = (ImageView) view
+                    .findViewById(R.id.id_index_gallery_item_image);
+            return viewHolder;
+        }
+
+
+        /**
+         * 设置值
+         */
+        @Override
+        public void onBindViewHolder(final ViewHolder viewHolder, final int postion)
+        {
+            viewHolder.mImg.setImageResource(mDatas.get(postion));
+            viewHolder.mImg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    // 点击事件
+                    Intent intent = new Intent(getActivity(),PoolActivity.class);
+                    intent.putExtra("position",postion);
+                    startActivity(intent);
+                }
+            });
+        }
+
     }
 }

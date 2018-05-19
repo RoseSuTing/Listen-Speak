@@ -227,7 +227,7 @@ public class AskingFragment extends  android.app.Fragment {
                             length1 = df.format(myRecAudioFile.length() / 1024.0 / 1024) + "M";
                         }
                         System.out.println(length1);
-                        Time_text.setText("Recording 00:00");
+                        Time_text.setText(" 00:00");
                     }
                 }
                 //停止录音了
@@ -360,7 +360,7 @@ public class AskingFragment extends  android.app.Fragment {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            Time_text.setText("Recording：" + minute + ":" + second);
+            Time_text.setText(minute + ":" + second);
         }
     };
 

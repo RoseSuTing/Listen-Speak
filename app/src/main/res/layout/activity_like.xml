@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LikeActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="@drawable/image4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/asking_back"
+                android:alpha="0.7"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:background="#FF909090"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="每日推荐"/>
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:background="#FF909090"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="@drawable/image4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/like_topic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/asking_back"
+                android:alpha="0.7"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:background="#FF909090"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="每日话题"/>
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:background="#FF909090"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/blueprimary">
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>
