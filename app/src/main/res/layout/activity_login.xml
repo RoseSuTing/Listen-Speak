@@ -40,6 +40,7 @@
             android:hint="eamil"
             android:singleLine="true"
             android:textColorHint="@color/gray"
+            android:textColor="@color/black"
             tools:layout_editor_absoluteX="75dp"
             tools:layout_editor_absoluteY="201dp" />
 
@@ -52,6 +53,7 @@
             android:singleLine="true"
             android:hint="password"
             android:textColorHint="@color/gray"
+            android:textColor="@color/black"
             android:layout_marginLeft="130dp"
             tools:layout_editor_absoluteX="75dp"
             tools:layout_editor_absoluteY="73dp" />

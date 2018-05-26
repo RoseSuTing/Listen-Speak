@@ -39,7 +39,7 @@ public class ListenFragment extends  android.app.Fragment {
     private OnFragmentInteractionListener mListener;
     public ArrayList<User> UserList = new ArrayList<User>();
     private ListView listview;
-    private ImageView play;
+    private ImageView play,like_topic;
     private boolean sigle = false;
     private boolean sdcardExit;
 
@@ -80,15 +80,17 @@ public class ListenFragment extends  android.app.Fragment {
 
         listview = getActivity().findViewById(R.id.listview);
         play = getActivity().findViewById(R.id.play);
-        ImageView img_like = getActivity().findViewById(R.id.like);
+        like_topic=getActivity().findViewById(R.id.like_topic);
 
-        img_like.setOnClickListener(new View.OnClickListener() {
+        like_topic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),LikeActivity.class);
+                Intent intent = new Intent(getActivity(),TopicActivity.class);
                 startActivity(intent);
             }
         });
+
+
 
         ListenAdapter listenAdapter =
                 new ListenAdapter(

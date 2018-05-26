@@ -7,44 +7,105 @@
     tools:context=".KindActivity"
     android:orientation="vertical"
     android:background="@color/white">
-
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <ImageView
-        android:layout_width="103dp"
-        android:layout_height="83dp"
+        android:layout_width="93dp"
+        android:layout_height="73dp"
         android:background="@drawable/kind1"
-        android:layout_marginLeft="50dp"/>
+        android:layout_marginLeft="50dp"
+        android:clickable="true"/>
     <ImageView
-        android:layout_width="103dp"
-        android:layout_height="83dp"
-        android:background="@drawable/kind2"
-        android:layout_marginLeft="190dp"/>
-    <ImageView
-        android:layout_width="103dp"
-        android:layout_height="83dp"
-        android:background="@drawable/kind3"
-        android:layout_marginLeft="80dp"/>
-    <ImageView
-        android:layout_width="103dp"
-        android:layout_height="83dp"
-        android:background="@drawable/kind5"
-        android:layout_marginLeft="230dp"/>
-    <ImageView
-        android:layout_width="103dp"
-        android:layout_height="83dp"
-        android:background="@drawable/kind4"
-        android:layout_marginLeft="30dp"/>
-    <ImageView
-        android:layout_width="103dp"
-        android:layout_height="83dp"
-        android:background="@drawable/kind6"
-        android:layout_marginLeft="140dp"/>
+        android:id="@+id/first"
+        android:layout_width="93dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="50dp" />
+</FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:background="@drawable/kind2"
+            android:layout_marginLeft="190dp"/>
+        <ImageView
+            android:id="@+id/second"
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="190dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:background="@drawable/kind3"
+            android:layout_marginLeft="80dp"/>
+        <ImageView
+            android:id="@+id/third"
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="80dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:background="@drawable/kind5"
+            android:layout_marginLeft="230dp"/>
+        <ImageView
+            android:id="@+id/fourth"
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="230dp"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:background="@drawable/kind4"
+            android:layout_marginLeft="30dp"/>
+        <ImageView
+            android:id="@+id/sixth"
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="30dp"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:background="@drawable/kind6"
+            android:layout_marginLeft="140dp"/>
+        <ImageView
+            android:id="@+id/eighth"
+            android:layout_width="93dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="140dp"/>
+    </FrameLayout>
+
     <Button
         android:id="@+id/sure"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:background="@drawable/boder"
         android:text="确定"
-        android:layout_marginLeft="150dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="60dp"
         android:textColor="@color/black"/>
 
 

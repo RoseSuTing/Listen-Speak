@@ -5,32 +5,103 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ShareActivity">
+    tools:context=".ShareActivity"
+    android:background="@color/gray">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="@color/white">
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/image4"
-            android:layout_marginTop="10dp"
+            android:layout_width="25dp"
+            android:layout_height="28dp"
+            android:background="@drawable/left"
+            android:layout_marginTop="18dp"
             android:layout_marginLeft="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="草稿箱"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:textColor="@color/black"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="110dp"
             android:layout_marginTop="10dp"/>
     </LinearLayout>
-    <ListView
-        android:id="@+id/listView_history"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        >
-    </ListView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray">
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/his_back"
+            android:layout_marginLeft="50dp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="240dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"/>
+            <View
+                android:layout_width="140dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="100dp"/>
+
+            <View
+                android:layout_width="260dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginTop="150dp"/>
+
+            <View
+                android:layout_width="260dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="200dp"/>
+
+            <View
+                android:layout_width="160dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="250dp"/>
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="300dp"/>
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="350dp"/>
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginTop="400dp"/>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="2dip"
+                android:background="#FF909090"
+                android:layout_marginTop="450dp"/>
+        </FrameLayout>
+        <ListView
+            android:id="@+id/listView_history"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            >
+        </ListView>
+    </FrameLayout>
 </LinearLayout>

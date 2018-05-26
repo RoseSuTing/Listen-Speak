@@ -4,7 +4,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 class TopicHolder {
-    TextView Username;
+    TextView Username ;
     TextView Topic;
     ImageView UserImg;
 }

@@ -5,7 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#080808</color>
-    <color name="blue">#87CEEB</color>#E6E6FA
-    <color name="blueprimary">#E6E6FA</color>#D4D4D4
+    <color name="blue">#CAE1FF</color>
+    <color name="blueprimary">#E6E6FA</color>
     <color name="gray">#B8B8B8</color>
+    <color name="red">#B22222</color>
+    <color name="clear">#00000000</color>
+    <color name="block">#60000000</color>
 </resources>

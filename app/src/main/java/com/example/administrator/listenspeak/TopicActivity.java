@@ -1,5 +1,6 @@
 package com.example.administrator.listenspeak;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -73,12 +74,12 @@ public class TopicActivity extends AppCompatActivity implements ViewPager.OnPage
         MyAdapter myAdapter =
                 new MyAdapter(
                         getBaseContext(), // Current context
-                        R.layout.layout, // the layout for each item in the list
+                        R.layout.layout2, // the layout for each item in the list
                         studentsList); // the arrayList to feed the arrayAdapter
 
-        final int[] img = new int[]{R.drawable.ic_launcher_background, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round};
-        String[] text1 = new String[]{"firstnoe", "second one", "third one", "fourth one", "fiveth one", "sixth one", "seventh one"};
-        String[] topic = new String[]{"adudb","huicba","hcuwibc","jdioecn","jucnnckj","cionc","cacnjcnzj"};
+        final int[] img = new int[]{R.drawable.user1, R.drawable.user2, R.drawable.user3, R.drawable.user4, R.drawable.user5, R.drawable.user6, R.drawable.user7};
+        String[] text1 = new String[]{"一枝花", "一种相思", "月里湾", "邓飞", "新歌", "小洁洁", "露露"};
+        String[] topic = new String[]{"外表汉子，内心妹子","倾城四海","想和你一起并肩看夕阳","我懂得你要说什么","山有木兮卿有你","一身诗意","关于你的传言"};
         for (int i = 0; i < img.length; i++) {
             studentsList.add(new Topic(text1[i],topic[i],img[i]));
         }
@@ -165,10 +166,9 @@ public class TopicActivity extends AppCompatActivity implements ViewPager.OnPage
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    SharedPreferences.Editor mySharedPreferences = getSharedPreferences("data", MODE_PRIVATE).edit();
-                    mySharedPreferences.putInt("log",newPosition);
-                    mySharedPreferences.commit();
-                    Toast.makeText(TopicActivity.this,"点击了:"+newPosition, Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(TopicActivity.this,NewsActivity.class);
+                    intent.putExtra("position",position);
+                    startActivity(intent);
                 }
             });
             //把图片添加到container中

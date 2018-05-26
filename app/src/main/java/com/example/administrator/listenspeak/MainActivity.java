@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        FragmentManager fragmentManager= getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.container,new ListenFragment()).commit();
         mTextMessage = (TextView) findViewById(R.id.message);
         mNavigationView = findViewById(R.id.navigation);
         bottomNavigationViewHelper.disableShiftMode(mNavigationView);

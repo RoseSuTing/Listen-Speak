@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SaveActivity"
-    android:background="@color/white"
+    android:background="@color/gray"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/blueprimary">
+        android:background="@color/gray">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="make title"
+        android:textColor="@color/black"
         android:layout_marginLeft="50dp"
         android:textSize="20dp"/>
     <Button
@@ -41,7 +42,8 @@
     </RelativeLayout>
 <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -57,7 +59,7 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginLeft="260dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:entries="@array/provarry"
         android:background="@color/blueprimary"/>
 </FrameLayout>
@@ -75,10 +77,12 @@
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:background="@color/white"
         />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp">
+        android:layout_height="40dp"
+        android:background="@color/white">
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -99,7 +103,7 @@
     </LinearLayout>
     <Gallery
         android:id="@+id/gallery"
-        android:background="#55000000"
+        android:background="@color/white"
         android:layout_width="fill_parent"
         android:layout_height="100dp"
         android:layout_alignParentLeft="true"
@@ -110,12 +114,18 @@
         android:animationDuration="10"
         />
 
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:layout_marginTop="20dp"
-    android:hint="                                 请输入标题"
-    android:textColorHint="@color/black"
-    android:background="@color/blueprimary"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="                                 请输入标题"
+            android:textColorHint="@color/gray"
+            android:background="@color/blueprimary"/>
+
+    </LinearLayout>
 
 </LinearLayout>

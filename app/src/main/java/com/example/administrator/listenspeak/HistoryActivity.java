@@ -37,8 +37,7 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
 
 
-        play.setEnabled(true);
-        delete.setEnabled(true);
+
         // 判断sd Card是否插入
         sdcardExit = Environment.getExternalStorageState().equals(
                 android.os.Environment.MEDIA_MOUNTED);

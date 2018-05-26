@@ -5,35 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TopicActivity"
-    android:orientation="vertical">
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="150dp"
+        android:background="@color/white">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:text="     每日话题"
+        android:textColor="@color/black"
         android:textSize="20dp"/>
     <ImageView
         android:layout_width="320dp"
         android:layout_height="70dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"/>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@color/blueprimary">
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </ListView>
-    </FrameLayout>
+        android:layout_marginTop="10dp"
+        android:background="@drawable/topic"/>
 
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="@color/blue"
+    android:layout_marginTop="10dp">
+
+</FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="20dp">
         <ImageView
             android:layout_width="80dp"
             android:layout_height="70dp"
@@ -49,13 +60,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="    username"
+                android:textColor="@color/black"
                 android:textSize="20dp"/>
-            <TextView
-                android:layout_width="match_parent"
+            <EditText
+                android:layout_width="250dp"
                 android:layout_height="30dp"
-                android:text="    说点什么参与话题吧"
+                android:hint="    说点什么参与话题吧"
                 android:textSize="20dp"
-                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/gray"
+                android:paddingLeft="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/blue"
                 android:layout_marginTop="10dp"/>
         </LinearLayout>
     </LinearLayout>

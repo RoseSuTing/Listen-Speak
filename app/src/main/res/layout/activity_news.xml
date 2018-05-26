@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+<ImageView
+    android:id="@+id/news_imag"
+    android:layout_width="match_parent"
+    android:layout_height="170dp" />
+    <TextView
+        android:id="@+id/big_title"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:text="我喜欢你"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:id="@+id/small_tile"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:text="我喜欢你"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"
+        android:layout_marginLeft="90dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp">
+    <View
+        android:layout_width="40dp"
+        android:layout_height="1dip"
+        android:background="#FF909090"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="简单心理"
+        android:textColor="@color/gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+    <View
+        android:layout_width="40dp"
+        android:layout_height="1dip"
+        android:background="#FF909090"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"/>
+</LinearLayout>
+</LinearLayout>

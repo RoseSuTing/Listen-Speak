@@ -87,6 +87,14 @@ public class WorldFragment extends  android.app.Fragment {
         initDatas();
         //得到控件
         mRecyclerView = getActivity().findViewById(R.id.id_recyclerview);
+        ImageView img = getActivity().findViewById(R.id.write);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),PoolActivity.class);
+                startActivity(intent);
+            }
+        });
         //设置布局管理器
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);

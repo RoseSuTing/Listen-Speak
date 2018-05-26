@@ -76,7 +76,7 @@ public class MyFragment extends android.app.Fragment{
         care.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),LikeActivity.class);
+                Intent intent = new Intent(getActivity(),CareActivity.class);
                 startActivity(intent);
             }
         });

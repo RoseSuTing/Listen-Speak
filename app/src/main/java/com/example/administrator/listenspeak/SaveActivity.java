@@ -125,6 +125,7 @@ public class SaveActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         private Context mContext;
     }
+
     @Override
     //实现onItemSelected()方法，更换图片
     public void onItemSelected(AdapterView<?> adapter, View v, int position, long id) {
